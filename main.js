@@ -6,7 +6,7 @@ window.addEventListener('scroll' , function () {
     headerBg.style.top = +window.pageYOffset+'px';
     headerBg.style.backgroundPositionY = - +window.pageYOffset/2+'px';
 
-    var value = 1 + window.scrollY/-1300;
+    var value = 1 + window.scrollY/-1100;
     scrollCurve.style.transform = 'scaleY(' + value + ')';
 })
 

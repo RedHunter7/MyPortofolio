@@ -345,6 +345,14 @@ body
     transform: translateY(-80px) translateX(-50%) rotate(45deg);
 }
 
+@media screen and (max-height: 700px)
+{
+    .scrolldown
+    {
+        visibility: hidden;
+    }
+}
+
 .scrolldown span
 {
     position: absolute;

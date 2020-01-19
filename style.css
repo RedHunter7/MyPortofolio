@@ -9,6 +9,7 @@ body
     padding: 0;
     font-family: sans-serif;
     background: #e3eeff;
+    width: 100vw;
 }
 
 .blur
@@ -690,6 +691,54 @@ footer
 {
     margin-right: 50px;
     margin-left: 50px;
+}
+
+@media screen and (max-width: 1200px)
+{
+    #clock
+    {
+        width: 90%;
+        font-size: 30pt;
+    }
+
+    #clock h1
+    {
+        margin-right: 37.5px;
+        margin-left: 37.5px;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    #clock
+    {
+        font-size: 20pt;
+    }
+
+    #clock h1
+    {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    footer
+    {
+        height: 75vh;
+    }
+
+    #clock
+    {
+        font-size: 15pt;
+    }
+
+    #clock h1
+    {
+        margin-right: 12.5px;
+        margin-left: 12.5px;
+    }
 }
 
 footer a

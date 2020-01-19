@@ -1,0 +1,711 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #e3eeff;
+}
+
+.blur
+{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar
+{
+    width: 1em;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #f7f7f7;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #03a9f4;
+    border-radius: 10px;
+}
+
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: -6;
+    overflow: hidden;
+    text-align: center;
+    transition: 1s;
+}
+
+.modal #close
+{
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    color: red;
+    cursor: pointer;
+}
+
+.modal #close:hover
+{
+    color: #111;
+}
+
+.modal.active
+{
+    z-index: 90;
+    visibility: visible;
+}
+
+.modal img
+{
+    position: absolute;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+
+@keyframes zoomIn 
+{
+    from 
+    {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% 
+    {
+      opacity: 1;
+    }
+  }
+  
+  .zoomIn 
+  {
+    animation-name: zoomIn;
+    animation-duration:  1s;
+  }
+
+  @keyframes zoomOut {
+    from 
+    {
+      opacity: 1;
+    }
+  
+    50% 
+    {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    to 
+    {
+      opacity: 0;
+    }
+  }
+  
+  .zoomOut 
+  {
+    animation-name: zoomOut;
+    animation-duration: 1s;
+  }
+
+.menu
+{
+    position: fixed;
+    top: 5%;
+    right: 3%;
+    padding: 10px 20px;
+    color: #007EA7;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #007EA7;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.menu:hover
+{
+    color: #f5f7fa;
+}
+
+.menu:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51%;
+    height: 100%;
+    background: #007EA7;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+    transform-origin: left;
+}
+
+.active:before
+{
+    background: red;
+}
+
+.menu:hover:before
+{
+    transform: scaleX(1);
+    transition: transform 0.5s;
+    transform-origin: right;
+}
+
+.menu:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 51%;
+    height: 100%;
+    background: #007EA7;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+    transform-origin: right;
+}
+
+.active:after
+{
+    background: red;
+}
+
+.menu:hover:after
+{
+    transform: scaleX(1);
+    transition: transform 0.5s;
+    transform-origin: left;
+}
+
+.menu .fa
+{
+    transition: 1s;
+}
+
+.nav
+{
+    position: fixed;
+    display: flex;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    left: 0;
+    top: 0;
+	width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 80;
+}
+
+.nav ul
+{
+    position: relative;
+}
+
+.nav ul li
+{
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+}
+
+.nav ul li a
+{
+    position: relative;
+    font-size: 3em;
+    cursor: pointer;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav ul:hover li a
+{
+    color: rgba(0, 0, 0, .1);
+}
+
+.nav ul li:hover a
+{
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.bottomNav
+{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 99;
+}
+
+.bottomNav a
+{
+    text-align: center;
+    width: 25%;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #007EA7;
+}
+
+.bottomNav a:hover
+{
+    background: #007EA7;
+    color: #f7f7f7;
+}
+
+.header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #68e0cf;
+}
+
+.header #bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.header #bg h2
+{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50% , -50%);
+    font-size: 8em;
+}
+
+.header #bg h2:before
+{
+    content: 'WELCOME';
+}
+
+.header #bg h2:nth-child(1)
+{
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.header #bg h2:nth-child(2)
+{
+    color: #03a9f4;
+    animation: wave 4s ease-in-out infinite;
+}
+
+.scrolldown
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+
+.scrolldown span:nth-child(1)
+{
+    transform: translate(-15px,-15px);
+    animation-delay: -0.4s;
+}
+
+.scrolldown span:nth-child(2)
+{
+    transform: translate(0,0);
+    animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3)
+{
+    transform: translate(15px,15px);
+    animation-delay: 0s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+
+    25%
+    {
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+
+    50%,100%
+    {
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .header #bg h2
+    {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 560px)
+{
+    .header #bg h2:nth-child(2)
+    {
+        animation: wave2 4s ease-in-out infinite;
+    }
+
+    .header #bg h2:before
+    {
+        font-family: fontAwesome;
+        content: "\f000";
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 300px)
+{
+    .header #bg h2:before
+    {
+        font-size: 1.5em;
+    }
+}
+
+@-webkit-keyframes wave
+{
+    0%,100%
+    {
+        -webkit-clip-path: polygon(0 100%, 0 32%, 28% 44%, 49% 46%, 68% 39%, 85% 28%, 100% 20%, 100% 100%);
+        clip-path: polygon(0 100%, 0 32%, 28% 44%, 49% 46%, 68% 39%, 85% 28%, 100% 20%, 100% 100%);
+    }
+    50%
+    {
+        -webkit-clip-path: polygon(0 100%, 0 42%, 23% 29%, 47% 22%, 70% 27%, 86% 34%, 100% 42%, 100% 100%);
+        clip-path: polygon(0 100%, 0 42%, 23% 29%, 47% 22%, 70% 27%, 86% 34%, 100% 42%, 100% 100%);
+    }
+}
+
+@keyframes wave
+{
+    0%,100%
+    {
+        -webkit-clip-path: polygon(0 100%, 0 32%, 28% 44%, 49% 46%, 68% 39%, 85% 28%, 100% 20%, 100% 100%);
+        clip-path: polygon(0 100%, 0 32%, 28% 44%, 49% 46%, 68% 39%, 85% 28%, 100% 20%, 100% 100%);
+    }
+    50%
+    {
+        -webkit-clip-path: polygon(0 100%, 0 42%, 23% 29%, 47% 22%, 70% 27%, 86% 34%, 100% 42%, 100% 100%);
+        clip-path: polygon(0 100%, 0 42%, 23% 29%, 47% 22%, 70% 27%, 86% 34%, 100% 42%, 100% 100%);
+    }
+}
+
+@keyframes wave2
+{
+    0%,100%
+    {
+        -webkit-clip-path: polygon(1% 99%, 0 36%, 16% 33%, 33% 31%, 51% 29%, 68% 28%, 84% 29%, 100% 32%, 100% 99%);
+        clip-path: polygon(1% 99%, 0 36%, 16% 33%, 33% 31%, 51% 29%, 68% 28%, 84% 29%, 100% 32%, 100% 99%);
+    }
+    50%
+    {
+        -webkit-clip-path: polygon(1% 99%, 0 17%, 15% 18%, 31% 19%, 51% 18%, 67% 18%, 83% 16%, 100% 15%, 100% 99%);
+        clip-path: polygon(1% 99%, 0 17%, 15% 18%, 31% 19%, 51% 18%, 67% 18%, 83% 16%, 100% 15%, 100% 99%);
+    }
+}
+
+@-webkit-keyframes wave2
+{
+    0%,100%
+    {
+        -webkit-clip-path: polygon(1% 99%, 0 36%, 16% 33%, 33% 31%, 51% 29%, 68% 28%, 84% 29%, 100% 32%, 100% 99%);
+        clip-path: polygon(1% 99%, 0 36%, 16% 33%, 33% 31%, 51% 29%, 68% 28%, 84% 29%, 100% 32%, 100% 99%);
+    }
+    50%
+    {
+        -webkit-clip-path: polygon(1% 99%, 0 17%, 15% 18%, 31% 19%, 51% 18%, 67% 18%, 83% 16%, 100% 15%, 100% 99%);
+        clip-path: polygon(1% 99%, 0 17%, 15% 18%, 31% 19%, 51% 18%, 67% 18%, 83% 16%, 100% 15%, 100% 99%);
+    }
+}
+
+.curve
+{
+    position: absolute;
+    height: calc(100% - 200px);
+    width: 100%;
+    background: linear-gradient(to top, #209cff 0%, #68e0cf 70%);
+    padding-bottom: 100px;
+}
+
+.curve .profileImg
+{
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.curve .curveImg
+{
+    position: absolute;
+    bottom: -200px;
+    height: 200px;
+    width: 100%;
+    transform-origin: top;
+}
+
+.curve .curveImg img
+{
+    height: 100%;
+    width: 100%;
+}
+
+.portofolio
+{
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.container .card
+{
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    padding-bottom: 40px;
+    border-radius: 30px;
+    background: #e3eeff;
+    box-shadow: 5px 5px 10px #c1cad9, 
+               -5px -5px 10px #ffffff;
+}
+
+.container .card:hover
+{
+    box-shadow: inset 5px 5px 10px rgba(193, 202, 217, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.container .card .imgBx
+{
+    cursor: zoom-in;
+    position: relative;
+    text-align: center;
+    height: 120px;
+}
+
+.container .card .imgBx img
+{
+    width: 100%;
+    height: 140px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.container .card .imgBx .middle
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.container .card .imgBx .middle i
+{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: white;
+}
+
+.container .card .imgBx:hover .middle
+{
+    opacity: 1;
+}
+    
+.container .card .contentBx
+{
+    position: relative;
+    margin: 30px 30px 0;
+    text-align: center;
+}
+
+.container .card .contentBx h2
+{
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.container .card .contentBx a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px #c1cad9, 
+               -5px -5px 10px #ffffff;
+}
+
+.container .card .contentBx a:active
+{
+    box-shadow: inset 5px 5px 10px rgba(193, 202, 217, 0.5), 
+                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.container .card a:active span
+{
+    display: block;
+    transform: scale(0.98);
+}
+
+.container .card:hover .imgBx , .container .card:active .contentBx 
+{
+    transform: scale(0.98);
+}
+
+footer
+{
+    position: absolute;
+    top: 300vh;
+    width: 100%;
+    height: 100vh;
+    background: #209cff;
+}
+
+#clock
+{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 25vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Audiowide';
+    font-size: 40pt;
+    border-radius: 50px;
+    box-shadow: 5px 5px 8px #1b85d9, 
+            -5px -5px 8px #25b3ff;
+    color: lightcyan;
+}
+
+#clock:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(27, 133, 217, 0.5), 
+    inset -5px -5px 8px #25b3ff;
+}
+
+#clock:hover h1
+{
+    transform: scale(0.98);
+}
+
+#clock h1
+{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+footer a
+{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: lightcyan;
+}
+
+footer a:hover
+{
+    color: white;
+}

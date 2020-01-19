@@ -1,0 +1,14 @@
+{
+    "name": "adli/portofolio",
+    "description": "portofolio website",
+    "type": "project",
+    "require": {
+        "php": "^7.3"
+    },
+    "authors": [
+        {
+            "name": "Adli",
+            "email": "redhunter42121@gmail.com"
+        }
+    ]
+}

@@ -52,19 +52,27 @@ document.getElementById('home').addEventListener('mouseout',function() {
     changeColorBg('linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)');
 });
 
-document.getElementById('about').addEventListener('mouseover',function() {
+document.getElementById('profile').addEventListener('mouseover',function() {
     changeColorBg('linear-gradient(to top, #c79081 0%, #dfa579 100%)')
 });
 
-document.getElementById('about').addEventListener('mouseout',function() {
+document.getElementById('profile').addEventListener('mouseout',function() {
     changeColorBg('linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)');
 });
 
-document.getElementById('services').addEventListener('mouseover',function() {
+document.getElementById('portofolio').addEventListener('mouseover',function() {
     changeColorBg('linear-gradient(to top, #0ba360 0%, #3cba92 100%)')
 });
 
-document.getElementById('services').addEventListener('mouseout',function() {
+document.getElementById('portofolio').addEventListener('mouseout',function() {
+    changeColorBg('linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)');
+});
+
+document.getElementById('thank').addEventListener('mouseover',function() {
+    changeColorBg('linear-gradient(120deg, #f093fb 0%, #f5576c 100%)')
+});
+
+document.getElementById('thank').addEventListener('mouseout',function() {
     changeColorBg('linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)');
 });
 

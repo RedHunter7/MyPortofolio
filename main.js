@@ -19,7 +19,7 @@ function openMenu() {
         nav.style.visibility = 'visible';
         nav.style.opacity = '0.8';
         document.getElementById('fa').innerHTML = '&#xf00d;';
-        menu.style.color = 'red';
+        menu.style.color = '#f5f7fa';
         menu.style.border = '2px solid red';
         menu.addEventListener('mouseover' , function() {
             menu.style.color = '#f5f7fa';
@@ -31,7 +31,7 @@ function openMenu() {
     } else if (nav.style.visibility == 'visible') {
         nav.style.opacity = '0';
         nav.style.visibility = 'hidden';
-        menu.style.color = '#007EA7';
+        menu.style.color = '#f5f7fa';
         document.getElementById('fa').innerHTML = '&#xf0c9;';
         menu.style.border = '2px solid #007EA7';
         menu.addEventListener('mouseover' , function() {

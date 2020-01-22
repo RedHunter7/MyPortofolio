@@ -751,6 +751,25 @@ footer
     }
 }
 
+@media screen and (max-width: 360px)
+{
+    footer
+    {
+        height: 75vh;
+    }
+
+    #clock
+    {
+        font-size: 12pt;
+    }
+
+    #clock h1
+    {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
 footer a
 {
     position: relative;

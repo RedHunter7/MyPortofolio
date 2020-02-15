@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body id="body">
+
+   <div class="loader-bg" id="loader">
+      <div class="loader">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+
    <div class="modal" id="modal">
       <a id="close"><i class="fa" style="font-size:48px">&#xf00d;</i></a>
       <img id="imgModal" src="assets/img/gunungkidul_preinan.png" alt="">
@@ -121,5 +131,11 @@
 </div>
    
     <script src="assets/js/main.js"></script>
+    <script>
+       window.addEventListener('load' , function() {
+          var loader = document.getElementById('loader');
+          loader.className += " hidden";
+       })
+    </script>
 </body>
 </html>

@@ -1,0 +1,102 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.intro-container {
+  @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-8;
+}
+
+.intro-container .logo-section {
+  @apply xl:w-2/5 xl:flex-auto xl:flex xl:justify-center;
+}
+
+.intro-container .logo-section .logo-frame {
+  @apply rounded-full border-8 border-primary p-6 sm:p-10 lg:p-14  flex items-center;
+  @apply w-44 h-44 sm:w-72 sm:h-72 lg:w-96 lg:h-96 xl:w-80 xl:h-80;
+}
+
+.intro-container .info-section {
+  @apply xl:flex-auto flex flex-col justify-center xl:justify-start items-center xl:items-start;
+  @apply gap-y-6 sm:gap-y-8 lg:gap-y-12 xl:gap-y-8;
+  @apply text-center xl:text-left;
+}
+
+.intro-container .info-section .first-child {
+  @apply text-accent font-bold text-2xl sm:text-4xl lg:text-5xl xl:px-20;
+}
+
+.intro-container .info-section .second-child {
+  @apply bg-primary rounded-xl py-2 px-5 sm:py-3 lg:py-4 w-10/12 lg:w-full xl:px-20;
+}
+
+.intro-container .info-section .third-child {
+  @apply text-accent w-9/12 lg:w-full;
+  @apply text-lg sm:text-3xl lg:text-4xl xl:px-20;
+  @apply leading-8 sm:leading-loose lg:leading-loose xl:leading-relaxed;
+}
+
+.tool-container {
+  @apply w-full rounded-2xl bg-primary text-center p-8 sm:p-12 lg:p-20 xl:py-10;
+}
+
+.tool-container .header, .work-container .header {
+  @apply text-accent font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-3xl;
+}
+
+.tool-container .logo-list {
+  @apply flex flex-wrap flex-row justify-center pt-7;
+  @apply sm:pt-10 lg:pt-12 gap-4 sm:gap-8 lg:gap-10;
+}
+
+.tool-container .logo-list .iconify {
+  @apply text-accent text-6xl sm:text-7xl lg:text-8xl;
+}
+
+.work-container {
+    @apply w-full text-center p-10;
+}
+
+.work-container .work-list {
+    @apply flex flex-wrap flex-row justify-center pt-10 gap-10;
+}
+
+.work-card {
+    @apply shadow-md bg-primary w-64 sm:w-72 lg:w-80 rounded-2xl;
+}
+
+.work-card figure {
+    @apply h-40 sm:h-44 lg:h-48;
+}
+
+.work-card figure img {
+    @apply rounded-t-2xl h-full object-cover;
+}
+
+.work-card .main-content {
+    @apply px-7 sm:px-9 h-40 sm:h-44 lg:h-48;
+}
+
+.work-card .main-content a {
+    @apply mt-10 text-accent font-bold text-xl lg:text-2xl hover:underline;
+}
+
+.work-card .main-content .description {
+    @apply mt-3 text-lg lg:text-xl text-accent text-left tracking-wide leading-relaxed lg:leading-relaxed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #edebd7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}

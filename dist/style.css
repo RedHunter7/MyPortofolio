@@ -18085,6 +18085,7 @@ video {
 
 .work-card figure img {
   height: 100%;
+  width: 100%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   -o-object-fit: cover;
@@ -18133,10 +18134,10 @@ video {
 
 .work-card .main-content .description {
   margin-top: 0.75rem;
-  text-align: left;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  line-height: 1.625;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 1.5rem;
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgba(237, 235, 215, var(--tw-text-opacity));
@@ -18144,9 +18145,9 @@ video {
 
 @media (min-width: 1024px) {
   .work-card .main-content .description {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
-    line-height: 1.625;
+    line-height: 2rem;
   }
 }
 

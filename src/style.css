@@ -69,7 +69,7 @@
 }
 
 .work-card figure img {
-    @apply rounded-t-2xl h-full object-cover;
+    @apply rounded-t-2xl h-full w-full object-cover;
 }
 
 .work-card .main-content {
@@ -81,7 +81,7 @@
 }
 
 .work-card .main-content .description {
-    @apply mt-3 text-lg lg:text-xl text-accent text-left tracking-wide leading-relaxed lg:leading-relaxed;
+    @apply mt-3 text-base lg:text-lg text-accent text-justify tracking-wide leading-6 lg:leading-8;
 }
 
 ::-webkit-scrollbar {

@@ -17946,6 +17946,7 @@ video {
 
 @media (min-width: 1280px) {
   .tool-container {
+    margin-bottom: 5rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
@@ -18029,12 +18030,6 @@ video {
   width: 100%;
   padding: 2.5rem;
   text-align: center;
-}
-
-@media (min-width: 1280px) {
-  .work-container {
-    margin-top: 5rem;
-  }
 }
 
 .work-container .work-list {

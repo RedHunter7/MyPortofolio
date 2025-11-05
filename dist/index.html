@@ -13,50 +13,55 @@
   <meta name="msapplication-TileColor" content="#b91d47" />
   <meta name="theme-color" content="#b3001b" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>Adli Rafif</title>
 </head>
 
 <body class="bg-secondary">
   <div class="intro-container">
-    <div class="logo-section">
+    <div class="logo-section" data-aos="fade-right">
       <figure class="logo-frame">
         <img src="img/portofolio-logo-red.png" alt="logo-profile" />
       </figure>
     </div>
     <div class="info-section">
-      <div class="first-child">Hello I am Adli</div>
+      <div data-aos="fade-left" class="first-child">Hello I am Adli</div>
       <div class="second-child">
-        <div class="text-accent font-bold text-lg sm:text-3xl lg:text-4xl">
-          Front-end Developer
+        <div data-aos="fade-left"
+        class="text-accent font-bold text-lg sm:text-3xl lg:text-4xl">
+          Programmer
         </div>
       </div>
-      <div class="third-child">
-        My Name is Adli Ra'i Rafif.<br />
-        I am Student College and Frontend Developer
+      <div data-aos="fade-left" class="third-child">
+        This portfolio showcases my projects, skills, and creative journey.
+        Explore my work and let’s connect to build something amazing together!
       </div>
     </div>
   </div>
   <div class="tool-container">
-    <div class="header">Devtools and Programming Languange I Use</div>
-    <div class="logo-list">
+    <div class="header" data-aos="flip-up">Devtools and Programming Languange I Use</div>
+    <div class="logo-list" data-aos="flip-down">
       <span class="iconify" data-inline="false" data-icon="icomoon-free:html-five"></span>
       <span class="iconify" data-inline="false" data-icon="simple-icons:css3"></span>
       <span class="iconify" data-inline="false" data-icon="simple-icons:javascript"></span>
       <span class="iconify" data-inline="false" data-icon="simple-icons:sass"></span>
       <span class="iconify" data-inline="false" data-icon="simple-icons:tailwindcss"></span>
-      <span class="iconify" data-inline="false" data-icon="ion:logo-pwa"></span>
-      <span class="iconify" data-inline="false" data-icon="cib:webpack"></span>
+      <span class="iconify" data-inline="false" data-icon="mdi:react"></span>
+      <span class="iconify" data-inline="false" data-icon="cib:typescript"></span>
+      <span class="iconify" data-inline="false" data-icon="file-icons:nextjs"></span>
       <span class="iconify" data-inline="false" data-icon="icomoon-free:git"></span>
       <span class="iconify" data-inline="false" data-icon="file-icons:vscode"></span>
       <span class="iconify" data-inline="false" data-icon="cib:unity"></span>
       <span class="iconify" data-inline="false" data-icon="teenyicons:c-sharp-solid"></span>
+      <span class="iconify" data-inline="false" data-icon="file-icons:lua"></span>
     </div>
   </div>
   <div class="work-container">
-    <div class="header">My Work</div>
+    <div class="header" data-aos="flip-up">My Work</div>
     <div class="work-list">
-      <div class="work-card">
+      <div class="work-card" data-aos="zoom-in">
         <figure>
           <img src="img/foodhalla_website.webp" alt="foodhalla preview" />
         </figure>
@@ -69,7 +74,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="zoom-in">
         <figure>
           <img src="img/fish-coverage_website.png" alt="fishcoverage preview" />
         </figure>
@@ -82,7 +87,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="zoom-in">
         <figure>
           <img src="img/bookshelf.png" alt="Bookshelf preview" />
         </figure>
@@ -95,7 +100,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="zoom-in">
         <figure>
           <img src="img/club-foot_website.png" alt="clubfoot preview" />
         </figure>
@@ -108,7 +113,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="zoom-in">
         <figure>
           <img src="img/c-tracker_website.webp" alt="c-traker preview" />
         </figure>
@@ -125,9 +130,9 @@
   </div>
 
   <div class="work-container">
-    <div class="header">My Games</div>
+    <div class="header" data-aos="flip-up">My Games</div>
     <div class="work-list">
-      <div class="work-card">
+      <div class="work-card" data-aos="fade-up">
         <figure>
           <img src="img/paper-adventure.png" alt="paper-adventure preview" />
         </figure>
@@ -140,7 +145,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="fade-up">
         <figure>
           <img src="img/throwing-spear.png" alt="throwing-spear preview" />
         </figure>
@@ -153,7 +158,7 @@
           </p>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card" data-aos="fade-up">
         <figure>
           <img src="img/revenge.webp" alt="revenge preview" />
         </figure>
@@ -168,6 +173,10 @@
       </div>
     </div>
   </div>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

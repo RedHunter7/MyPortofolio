@@ -3,22 +3,22 @@
 @import "tailwindcss/utilities";
 
 .intro-container {
-  @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-8;
+  @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-4;
 }
 
 .intro-container .logo-section {
-  @apply xl:w-2/5 xl:flex-auto xl:flex xl:justify-center;
+  @apply xl:w-4/12 xl:flex-auto xl:flex xl:justify-center;
 }
 
 .intro-container .logo-section .logo-frame {
   @apply rounded-full border-8 border-primary p-6 sm:p-10 lg:p-14  flex items-center;
-  @apply w-44 h-44 sm:w-72 sm:h-72 lg:w-96 lg:h-96 xl:w-80 xl:h-80;
+  @apply w-44 h-44 sm:w-72 sm:h-72 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
 }
 
 .intro-container .info-section {
   @apply xl:flex-auto flex flex-col justify-center xl:justify-start items-center xl:items-start;
-  @apply gap-y-6 sm:gap-y-8 lg:gap-y-12 xl:gap-y-8;
-  @apply text-center xl:text-left;
+  @apply gap-y-6 sm:gap-y-8 lg:gap-y-6 xl:gap-y-8;
+  @apply text-center xl:text-left xl:w-8/12;
 }
 
 .intro-container .info-section .first-child {
@@ -26,12 +26,12 @@
 }
 
 .intro-container .info-section .second-child {
-  @apply bg-primary rounded-xl py-2 px-5 sm:py-3 lg:py-4 w-10/12 lg:w-full xl:px-20;
+  @apply bg-primary rounded-xl py-2 px-5 sm:py-3 lg:py-4 w-10/12 xl:w-full xl:px-20;
 }
 
 .intro-container .info-section .third-child {
-  @apply text-accent w-9/12 lg:w-full;
-  @apply text-lg sm:text-3xl lg:text-4xl xl:px-20;
+  @apply text-accent w-9/12 xl:w-full;
+  @apply text-lg sm:text-3xl lg:text-3xl xl:px-20;
   @apply leading-8 sm:leading-loose lg:leading-loose xl:leading-relaxed;
 }
 

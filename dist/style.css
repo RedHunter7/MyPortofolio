@@ -10001,6 +10001,11 @@ video {
           animation: bounce 1s infinite;
 }
 
+.animate-typing {
+  -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+          animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+}
+
 .cursor-auto {
   cursor: auto;
 }
@@ -17687,7 +17692,7 @@ video {
 
 @media (min-width: 640px) {
   .intro-container {
-    row-gap: 2rem;
+    row-gap: 1rem;
   }
 }
 
@@ -17700,7 +17705,7 @@ video {
 @media (min-width: 1280px) {
   .intro-container .logo-section {
     display: flex;
-    width: 40%;
+    width: 33.333333%;
     flex: 1 1 auto;
     justify-content: center;
   }
@@ -17740,10 +17745,16 @@ video {
   }
 }
 
+@media (min-width: 768px) {
+  .intro-container .logo-section .logo-frame {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .intro-container .logo-section .logo-frame {
-    height: 24rem;
-    width: 24rem;
+    height: 20rem;
+    width: 20rem;
   }
 }
 
@@ -17781,7 +17792,7 @@ video {
 
 @media (min-width: 1024px) {
   .intro-container .info-section {
-    row-gap: 3rem;
+    row-gap: 1.5rem;
   }
 }
 
@@ -17797,6 +17808,7 @@ video {
 
 @media (min-width: 1280px) {
   .intro-container .info-section {
+    width: 66.666667%;
     text-align: left;
   }
 }
@@ -17830,6 +17842,13 @@ video {
   }
 }
 
+.intro-container .info-section .first-child {
+  -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+          animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .intro-container .info-section .second-child {
   width: 83.333333%;
   border-radius: 0.75rem;
@@ -17850,7 +17869,6 @@ video {
 
 @media (min-width: 1024px) {
   .intro-container .info-section .second-child {
-    width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -17858,6 +17876,7 @@ video {
 
 @media (min-width: 1280px) {
   .intro-container .info-section .second-child {
+    width: 100%;
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -17869,7 +17888,7 @@ video {
   color: rgba(237, 235, 215, var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .intro-container .info-section .third-child {
     width: 100%;
   }
@@ -17889,8 +17908,8 @@ video {
 
 @media (min-width: 1024px) {
   .intro-container .info-section .third-child {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -27533,6 +27552,11 @@ video {
   .sm\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .sm\:animate-typing {
+    -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+            animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
   }
 
   .sm\:cursor-auto {
@@ -44509,6 +44533,11 @@ video {
             animation: bounce 1s infinite;
   }
 
+  .md\:animate-typing {
+    -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+            animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+  }
+
   .md\:cursor-auto {
     cursor: auto;
   }
@@ -61481,6 +61510,11 @@ video {
   .lg\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .lg\:animate-typing {
+    -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+            animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
   }
 
   .lg\:cursor-auto {
@@ -78457,6 +78491,11 @@ video {
             animation: bounce 1s infinite;
   }
 
+  .xl\:animate-typing {
+    -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+            animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+  }
+
   .xl\:cursor-auto {
     cursor: auto;
   }
@@ -95429,6 +95468,11 @@ video {
   .\32xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-typing {
+    -webkit-animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+            animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
   }
 
   .\32xl\:cursor-auto {

@@ -2,10 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@theme {
-  --primary: #B3001B;
-}
-
 .intro-container {
   @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-4;
 }
@@ -15,8 +11,15 @@
 }
 
 .intro-container .logo-section .logo-frame {
-  @apply rounded-full border-8 border-primary p-6 sm:p-10 lg:p-14  flex items-center;
+  @apply rounded-full border-0 border-primary p-6 sm:p-10 lg:p-14 flex items-center;
+  @apply relative w-44 h-44 sm:w-72 sm:h-72 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
+}
+
+.intro-container .logo-section .logo-frame::before {
+  content: "";
+  @apply rounded-full border-t-10 border-b-10 border-primary p-6 sm:p-10 lg:p-14 flex items-center;
   @apply w-44 h-44 sm:w-72 sm:h-72 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
+  @apply animate-spin absolute top-0 -left-2
 }
 
 .intro-container .info-section {
@@ -26,7 +29,7 @@
 }
 
 .intro-container .info-section .first-child {
-  @apply text-accent font-bold text-2xl sm:text-4xl lg:text-5xl xl:px-20;
+  @apply animate-bounce text-accent font-bold text-2xl sm:text-4xl lg:text-5xl xl:px-20;
 }
 
 .intro-container .info-section .second-child {

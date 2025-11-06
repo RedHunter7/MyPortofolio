@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@theme {
+  --primary: #B3001B;
+}
+
 .intro-container {
   @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-4;
 }
@@ -81,7 +85,7 @@
 }
 
 .work-card .main-content .description {
-    @apply mt-3 text-base lg:text-lg text-accent text-justify tracking-wide leading-6 lg:leading-8;
+    @apply mt-3 text-base font-medium lg:text-lg text-accent text-justify tracking-wide leading-6 lg:leading-8;
 }
 
 ::-webkit-scrollbar {

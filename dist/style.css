@@ -18025,13 +18025,13 @@ video {
 
 .intro-container .logo-section .logo-frame::before {
   content: "";
-  display: flex;
-  align-items: center;
   border-radius: 9999px;
   border-top-width: 10px;
   border-bottom-width: 10px;
   --tw-border-opacity: 1;
   border-color: rgba(179, 0, 27, var(--tw-border-opacity));
+  display: flex;
+  align-items: center;
   padding: 1.5rem
 }
 
@@ -18048,14 +18048,14 @@ video {
 }
 
 .intro-container .logo-section .logo-frame::before {
-  height: 11rem;
-  width: 11rem;
+  height: 13rem;
+  width: 13rem;
 }
 
 @media (min-width: 640px) {
   .intro-container .logo-section .logo-frame::before {
-    height: 18rem;
-    width: 18rem;
+    height: 20rem;
+    width: 20rem;
   }
 }
 
@@ -18081,10 +18081,24 @@ video {
 
 .intro-container .logo-section .logo-frame::before {
   position: absolute;
-  top: 0px;
-  left: -0.5rem;
+  top: -1.25rem;
+  left: -1rem;
   -webkit-animation: spin 3s infinite linear;
           animation: spin 3s infinite linear;
+}
+
+@media (min-width: 1024px) {
+  .intro-container .logo-section .logo-frame::before {
+    top: -0.25rem;
+    left: -0.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro-container .logo-section .logo-frame::before {
+    top: 0px;
+    left: -0.5rem;
+  }
 }
 
 .intro-container .info-section {

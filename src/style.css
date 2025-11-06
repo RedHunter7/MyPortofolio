@@ -17,9 +17,10 @@
 
 .intro-container .logo-section .logo-frame::before {
   content: "";
-  @apply rounded-full border-t-10 border-b-10 border-primary p-6 sm:p-10 lg:p-14 flex items-center;
-  @apply w-44 h-44 sm:w-72 sm:h-72 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
-  @apply animate-spin absolute top-0 -left-2
+  @apply rounded-full border-t-10 border-b-10 border-primary; 
+  @apply p-6 sm:p-10 lg:p-14 flex items-center;
+  @apply w-52 h-52 sm:w-80 sm:h-80 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
+  @apply animate-spin absolute -top-5 -left-4 lg:-top-1 lg:-left-2 xl:top-0 xl:-left-2
 }
 
 .intro-container .info-section {

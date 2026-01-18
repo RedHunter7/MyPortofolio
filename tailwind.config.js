@@ -1,16 +1,18 @@
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.js',
-  ],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./index.html', './src/**/*.{js,ts,vue,jsx,tsx}'],
   theme: {
-    colors: {
-      primary: '#B3001B',
-      secondary: '#262626',
-      accent: '#EDEBD7',
-    },
     extend: {
+      screens: {
+        'landscape-h-sm': {
+          raw: '(orientation: landscape) and (min-height: 640px)',
+        },
+        'landscape-h-md': {
+          raw: '(orientation: landscape) and (min-height: 768px)',
+        },
+        'landscape-h-lg': {
+          raw: '(orientation: landscape) and (min-height: 1024px)',
+        }
+      },
       borderWidth: {
         '1': '1px',  // Default border-1
         '3': '3px',  // Custom border-3
@@ -35,9 +37,6 @@ module.exports = {
         'spin': 'spin 3s infinite linear'
       }
     }
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

@@ -6,16 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "postcss src/style.css -o dist/style.css",
+    "build2": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --config ./tailwind.config.js",
     "deploy": "gh-pages -d dist"
   },
   "author": "Adli Rafif",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
     "cssnano": "^7.1.2",
     "gh-pages": "^3.2.2",
-    "postcss": "^8.3.4",
+    "postcss": "^8.5.6",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.2"
+    "tailwindcss": "^4.1.18"
   }
 }

@@ -1,32 +1,42 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
-.intro-container {
-  @apply w-full h-screen flex flex-col xl:flex-row justify-center items-center gap-y-6 sm:gap-y-4;
+@theme {
+  --color-primary: #B3001B;
+  --color-secondary: #262626;
+  --color-accent: #EDEBD7;
 }
 
+.intro-container {
+  @apply w-full h-screen flex flex-col justify-center items-center gap-y-6 sm:gap-y-4;
+  @apply landscape:flex-row;
+}
+
+
 .intro-container .logo-section {
-  @apply xl:w-4/12 xl:flex-auto xl:flex xl:justify-center;
+  @apply landscape:w-5/12 landscape:flex-auto landscape:flex landscape:justify-center;
 }
 
 .intro-container .logo-section .logo-frame {
   @apply rounded-full border-0 border-primary p-6 sm:p-10 lg:p-14 flex items-center;
-  @apply relative w-44 h-44 sm:w-72 sm:h-72 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
+  @apply relative size-44 sm:size-72 md:mb-6 lg:size-80 ;
 }
 
 .intro-container .logo-section .logo-frame::before {
   content: "";
   @apply rounded-full border-t-10 border-b-10 border-primary; 
   @apply p-6 sm:p-10 lg:p-14 flex items-center;
-  @apply w-52 h-52 sm:w-80 sm:h-80 md:mb-6 lg:w-80 lg:h-80 xl:w-80 xl:h-80;
-  @apply animate-spin absolute -top-5 -left-4 lg:-top-1 lg:-left-2 xl:top-0 xl:-left-2
+  @apply size-52 sm:size-80 md:size-80 md:mb-6;
+  @apply animate-spin absolute -top-5 -left-4 lg:-top-1 lg:-left-2 xl:top-0 xl:-left-2;
 }
 
 .intro-container .info-section {
-  @apply xl:flex-auto flex flex-col justify-center xl:justify-start items-center xl:items-start;
-  @apply gap-y-6 sm:gap-y-8 lg:gap-y-6 xl:gap-y-8;
-  @apply text-center xl:text-left xl:w-8/12;
+  @apply xl:flex-auto flex flex-col justify-center items-center;
+  @apply portrait:gap-y-6 portrait:sm:gap-y-8 portrait:lg:gap-y-6 portrait:xl:gap-y-8;
+  @apply text-center;
+
+  @apply landscape:justify-start landscape:items-start;
+  @apply landscape:text-left landscape:w-7/12 landscape:gap-y-2;
+  @apply landscape:md:gap-y-6;
 }
 
 .intro-container .info-section .first-child {
@@ -34,13 +44,36 @@
 }
 
 .intro-container .info-section .second-child {
-  @apply bg-primary rounded-xl py-2 px-5 sm:py-3 lg:py-4 w-10/12 xl:w-full xl:px-20;
+  @apply bg-primary rounded-xl py-2 px-5 sm:py-3 lg:py-4 w-10/12 xl:px-20;
+  @apply landscape:w-full;
 }
 
 .intro-container .info-section .third-child {
-  @apply text-accent w-9/12 xl:w-full;
-  @apply text-lg sm:text-3xl lg:text-3xl xl:px-20;
+  @apply text-accent w-9/12;
+  @apply text-lg sm:text-2xl xl:px-20;
   @apply leading-8 sm:leading-loose lg:leading-loose xl:leading-relaxed;
+  @apply landscape:w-full landscape:text-base;
+  @apply landscape:md:text-2xl;
+}
+
+@screen landscape-h-md {
+  .intro-container .info-section {
+    @apply gap-y-8;
+  }
+
+  .intro-container .info-section .third-child {
+    @apply text-2xl;
+  }
+}
+
+@screen landscape-h-lg {
+  .intro-container .logo-section {
+    @apply w-4/12;
+  }
+
+  .intro-container .info-section {
+    @apply w-8/12 text-2xl;
+  }
 }
 
 .tool-container {
@@ -90,6 +123,16 @@
 
 .work-card .main-content .description {
     @apply mt-3 text-base font-medium lg:text-lg text-accent text-justify tracking-wide leading-6 lg:leading-8;
+}
+
+@screen landscape-h-sm {
+  .intro-container .info-section {
+    @apply gap-y-1 sm:gap-y-8;
+  }
+
+  .intro-container .info-section .third-child {
+    @apply text-lg;
+  }
 }
 
 ::-webkit-scrollbar {

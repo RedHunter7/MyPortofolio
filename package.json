@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "postcss src/style.css -o dist/style.css",
-    "build2": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --config ./tailwind.config.js",
     "deploy": "gh-pages -d dist"
   },
   "author": "Adli Rafif",
